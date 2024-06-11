@@ -7,7 +7,7 @@
 	objects = {
 
 /* Begin PBXBuildFile section */
-		05C8C94F2B45AB0C008C2CCA /* main.swift in Sources */ = {isa = PBXBuildFile; fileRef = 05C8C94E2B45AB0C008C2CCA /* main.swift */; };
+		05F6727E2C1846FF00ED9D93 /* main.swift in Sources */ = {isa = PBXBuildFile; fileRef = 05F6727D2C1846FF00ED9D93 /* main.swift */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXCopyFilesBuildPhase section */
@@ -24,7 +24,22 @@
 
 /* Begin PBXFileReference section */
 		05C8C94B2B45AB0C008C2CCA /* Programmers */ = {isa = PBXFileReference; explicitFileType = "compiled.mach-o.executable"; includeInIndex = 0; path = Programmers; sourceTree = BUILT_PRODUCTS_DIR; };
-		05C8C94E2B45AB0C008C2CCA /* main.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = main.swift; sourceTree = "<group>"; };
+		05F6727D2C1846FF00ED9D93 /* main.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = main.swift; sourceTree = "<group>"; };
+		05F672802C18470B00ED9D93 /* 수 조작하기 1.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = "수 조작하기 1.swift"; sourceTree = "<group>"; };
+		05F672812C18470B00ED9D93 /* 홀짝 구분하기.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = "홀짝 구분하기.swift"; sourceTree = "<group>"; };
+		05F672822C18470B00ED9D93 /* 조건 문자열.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = "조건 문자열.swift"; sourceTree = "<group>"; };
+		05F672832C18470B00ED9D93 /* 수 조작하기 2.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = "수 조작하기 2.swift"; sourceTree = "<group>"; };
+		05F672842C18470B00ED9D93 /* 이어 붙인 수.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = "이어 붙인 수.swift"; sourceTree = "<group>"; };
+		05F672852C18470B00ED9D93 /* 원소들의 곱과 합.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = "원소들의 곱과 합.swift"; sourceTree = "<group>"; };
+		05F672862C18470B00ED9D93 /* 대소문자 바꿔서 출력하기.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = "대소문자 바꿔서 출력하기.swift"; sourceTree = "<group>"; };
+		05F672872C18470B00ED9D93 /* 주사위 게임 2.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = "주사위 게임 2.swift"; sourceTree = "<group>"; };
+		05F672882C18470B00ED9D93 /* 문자열 곱하기.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = "문자열 곱하기.swift"; sourceTree = "<group>"; };
+		05F672892C18470B00ED9D93 /* 올바른 괄호.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = "올바른 괄호.swift"; sourceTree = "<group>"; };
+		05F6728A2C18470B00ED9D93 /* 문자열 겹쳐쓰기.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = "문자열 겹쳐쓰기.swift"; sourceTree = "<group>"; };
+		05F6728B2C18470B00ED9D93 /* 기능개발.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = "기능개발.swift"; sourceTree = "<group>"; };
+		05F6728C2C18470B00ED9D93 /* 문자열 섞기.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = "문자열 섞기.swift"; sourceTree = "<group>"; };
+		05F6728D2C18470B00ED9D93 /* 코드 처리하기.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = "코드 처리하기.swift"; sourceTree = "<group>"; };
+		05F6728E2C18470B00ED9D93 /* 수열과 구간 쿼리 3.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = "수열과 구간 쿼리 3.swift"; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -42,6 +57,7 @@
 			isa = PBXGroup;
 			children = (
 				05C8C94D2B45AB0C008C2CCA /* Programmers */,
+				05F6727F2C18470B00ED9D93 /* Solved */,
 				05C8C94C2B45AB0C008C2CCA /* Products */,
 			);
 			sourceTree = "<group>";
@@ -57,9 +73,31 @@
 		05C8C94D2B45AB0C008C2CCA /* Programmers */ = {
 			isa = PBXGroup;
 			children = (
-				05C8C94E2B45AB0C008C2CCA /* main.swift */,
+				05F6727D2C1846FF00ED9D93 /* main.swift */,
 			);
 			path = Programmers;
+			sourceTree = "<group>";
+		};
+		05F6727F2C18470B00ED9D93 /* Solved */ = {
+			isa = PBXGroup;
+			children = (
+				05F672802C18470B00ED9D93 /* 수 조작하기 1.swift */,
+				05F672812C18470B00ED9D93 /* 홀짝 구분하기.swift */,
+				05F672822C18470B00ED9D93 /* 조건 문자열.swift */,
+				05F672832C18470B00ED9D93 /* 수 조작하기 2.swift */,
+				05F672842C18470B00ED9D93 /* 이어 붙인 수.swift */,
+				05F672852C18470B00ED9D93 /* 원소들의 곱과 합.swift */,
+				05F672862C18470B00ED9D93 /* 대소문자 바꿔서 출력하기.swift */,
+				05F672872C18470B00ED9D93 /* 주사위 게임 2.swift */,
+				05F672882C18470B00ED9D93 /* 문자열 곱하기.swift */,
+				05F672892C18470B00ED9D93 /* 올바른 괄호.swift */,
+				05F6728A2C18470B00ED9D93 /* 문자열 겹쳐쓰기.swift */,
+				05F6728B2C18470B00ED9D93 /* 기능개발.swift */,
+				05F6728C2C18470B00ED9D93 /* 문자열 섞기.swift */,
+				05F6728D2C18470B00ED9D93 /* 코드 처리하기.swift */,
+				05F6728E2C18470B00ED9D93 /* 수열과 구간 쿼리 3.swift */,
+			);
+			path = Solved;
 			sourceTree = "<group>";
 		};
 /* End PBXGroup section */
@@ -94,6 +132,7 @@
 				TargetAttributes = {
 					05C8C94A2B45AB0C008C2CCA = {
 						CreatedOnToolsVersion = 15.1;
+						LastSwiftMigration = 1520;
 					};
 				};
 			};
@@ -120,7 +159,7 @@
 			isa = PBXSourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
-				05C8C94F2B45AB0C008C2CCA /* main.swift in Sources */,
+				05F6727E2C1846FF00ED9D93 /* main.swift in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
@@ -248,10 +287,12 @@
 		05C8C9532B45AB0C008C2CCA /* Debug */ = {
 			isa = XCBuildConfiguration;
 			buildSettings = {
+				CLANG_ENABLE_MODULES = YES;
 				CODE_SIGN_STYLE = Automatic;
 				DEVELOPMENT_TEAM = 9JZYRP3D46;
 				ENABLE_HARDENED_RUNTIME = YES;
 				PRODUCT_NAME = "$(TARGET_NAME)";
+				SWIFT_OPTIMIZATION_LEVEL = "-Onone";
 				SWIFT_VERSION = 5.0;
 			};
 			name = Debug;
@@ -259,6 +300,7 @@
 		05C8C9542B45AB0C008C2CCA /* Release */ = {
 			isa = XCBuildConfiguration;
 			buildSettings = {
+				CLANG_ENABLE_MODULES = YES;
 				CODE_SIGN_STYLE = Automatic;
 				DEVELOPMENT_TEAM = 9JZYRP3D46;
 				ENABLE_HARDENED_RUNTIME = YES;

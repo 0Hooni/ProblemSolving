@@ -88,8 +88,6 @@ fastlane/test_output
 # https://github.com/johnno1962/injectionforxcode
 
 iOSInjectionProject/
-Algorithm/Algorithm/main.swift
-Algorithm/Complete/0_Copy only.swift
 Programmers/Programmers/main.swift
 Programmers/Programmers.xcodeproj/project.pbxproj
-Programmers/.DS_Store
+*/.DS_Store

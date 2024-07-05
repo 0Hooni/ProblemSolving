@@ -1,27 +1,17 @@
 import Foundation
 
-let num = readLine()!.map { Int(String($0))! }
-var numCount = [Int](repeating: 0, count: 9)
-var res = 0
+let n = Int(readLine()!)!
+let n2 = n*n
+let target = Int(readLine()!)!
+var arr = [[Int]]()
 
-// 숫자가 없으면 새로운 세트 추가
-// 숫자가 있으면 세트 추가 x
-// 숫자 9는 6에서 빼기
+/*
+n^2을 구하는 방법 찾기
+달팽이 배열 만드는 방법 찾기(완탐)
+*/
 
-for n in num {
-    if numCount[n == 9 ? 6 : n] == 0 {
-        addNewSet()
-        numCount[n == 9 ? 6 : n] -= 1
-    } else {
-        numCount[n == 9 ? 6 : n] -= 1
+for i in 0..<n {
+    for j in 0..<n {
+        n2 - (5*i + j)
     }
 }
-
-func addNewSet() {
-    for i in 0..<10 {
-        numCount[i == 9 ? 6 : i] += 1
-    }
-    res += 1
-}
-
-print(res)

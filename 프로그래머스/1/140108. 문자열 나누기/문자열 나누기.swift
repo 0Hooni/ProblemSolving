@@ -15,11 +15,11 @@ func solution(_ s:String) -> Int {
         
         if xCount == anotherCount {
             result.append(String(strArr[0..<xCount*2]))
-            strArr.removeSubrange(0..<xCount*2)
+            for j in 0..<xCount*2 { strArr.removeFirst() }
             xCount = 0
             anotherCount = 0
         }
     }
-    print(result)
+    
     return strArr.isEmpty ? result.count : result.count + 1
 }

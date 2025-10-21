@@ -1,14 +1,14 @@
+import Foundation
+
 func solution(_ s:String) -> String {
-    var curIdx = 0
-    var result = ""
+    let a = s.components(separatedBy: " ")    // "try", "hello", "world"
+            .map { word in
+                word.enumerated().map { (i, ch) in // "(t, 0), ... "
+                    i % 2 == 0 ?
+                    String(ch).uppercased() :
+                    String(ch).lowercased()
+                }.joined()
+            }
     
-    for ch in s {
-        if ch == " " { curIdx = 0; result += " "; continue }
-        
-        if curIdx % 2 == 0 { result += String(ch).uppercased() } 
-        else { result += String(ch).lowercased() }
-        curIdx += 1
-    }
-    
-    return result
+    return a.joined(separator: " ")
 }

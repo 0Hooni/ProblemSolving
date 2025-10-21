@@ -1,24 +1,24 @@
 import Foundation
 
-/// numbers: 크기 2~20
-/// numbers: 값 1~50
-/// target: 1~1000
 func solution(_ numbers:[Int], _ target:Int) -> Int {
-    var count = 0
-    
-    func dfs(index: Int, sum: Int) {
-        if index == numbers.count {
-            if sum == target { count += 1 }
-            
-            return
-        }
+    var result = 0
 
-        dfs(index: index + 1, sum: sum + numbers[index])
-        dfs(index: index + 1, sum: sum - numbers[index])
+    func dfs(_ numbers: [Int], _ sum: Int, _ isMinus: Bool) {
+        var numbers = numbers
+        let cur = numbers.removeFirst()
+        var sum = sum + (isMinus ? -cur : cur)
+
+        // 마지막 노드에 오면 sum을 비교
+        if numbers.isEmpty {
+            if sum == target { result += 1 }
+        } else {    // 마지막이 아니면 (+, -)로 나눠짐
+            dfs(numbers, sum, true)
+            dfs(numbers, sum, false)
+        }
     }
     
-    dfs(index: 0, sum: 0)
+    dfs(numbers, 0, true)
+    dfs(numbers, 0, false)
     
-    return count
+    return result
 }
-    

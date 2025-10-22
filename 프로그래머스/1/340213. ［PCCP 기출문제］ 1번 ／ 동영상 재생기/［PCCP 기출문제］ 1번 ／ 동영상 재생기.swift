@@ -7,7 +7,7 @@ func solution(_ video_len:String, _ pos:String, _ op_start:String, _ op_end:Stri
     let opEnd = toSec(op_end)
     
     // 시작 시점이 오프닝이면 즉시 건너뛰기
-    if curSec >= opStart && curSec <= opEnd { curSec = opEnd }
+    if opStart <= curSec && curSec <= opEnd { curSec = opEnd }
     
     for cmd in commands {
         curSec += (cmd == "next") ? 10 : -10
@@ -16,7 +16,7 @@ func solution(_ video_len:String, _ pos:String, _ op_start:String, _ op_end:Stri
         curSec = max(0, min(curSec, maxSec))
         
         // 매 스텝마다 오프닝이면 즉시 건너뛰기
-        if curSec >= opStart && curSec <= opEnd { curSec = opEnd }
+        if opStart <= curSec && curSec <= opEnd { curSec = opEnd }
     }
     
     return toTime(curSec)

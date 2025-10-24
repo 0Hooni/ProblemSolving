@@ -1,17 +1,13 @@
 import Foundation
 
 func solution(_ p:String) -> String {
-    let result = dfs(p)
-    
-    return result
+    return dfs(p)
 }
 
 func dfs(_ w: String) -> String {
     if w == "" { return "" }
     
-    let devided = devideBalandedString(w)
-    var u = devided[0]
-    let v = devided[1]
+    var (u, v) = devideBalandedString(w)
     
     if isRightString(u) { return u + dfs(v) }
     else {
@@ -50,7 +46,7 @@ func isRightString(_ p: String) -> Bool {
     return stack.isEmpty
 }
 
-func devideBalandedString(_ p: String) -> [String] {
+func devideBalandedString(_ p: String) -> (String, String) {
     let p = Array(p).map { String($0) }
     
     var openStr = 0
@@ -60,12 +56,12 @@ func devideBalandedString(_ p: String) -> [String] {
         else { closedStr += 1}
         
         if openStr == closedStr {
-            return [
+            return (
                 p[0...idx].map { String($0) }.joined(), 
                 p[(idx+1)..<p.count].map { String($0) }.joined()
-            ]
+            )
         }
     }
     
-    return []
+    return ("", "")
 }

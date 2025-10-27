@@ -16,7 +16,7 @@ func solution(_ queue1:[Int], _ queue2:[Int]) -> Int {
     var i = 0, j = q1.count
     var sum1 = q1.reduce(Int64(0), +)
     var moves = 0
-    let limit = 2 * N + 5
+    let limit = 2 * N
     
     while moves <= limit {
         if sum1 == target { return moves }

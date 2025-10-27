@@ -3,7 +3,7 @@ import Foundation
 func solution(_ n:Int, _ k:Int) -> Int {
     // 0 기준 스플릿 -> 필요없는 인수 제거(0, 1) -> 소수 판별
     // 해당 N 은 K 진법에서도 10진법에서도 소수여야 함.
-    let kStr = trans(n, k)
+    let kStr = String(n, radix: k)
     let numStrArr = kStr.components(separatedBy: "0").filter { 
         $0 != "" && $0 != "0" && $0 != "1"
     }
@@ -13,15 +13,14 @@ func solution(_ n:Int, _ k:Int) -> Int {
     
     var count = 0
     for num in numStrArr {
-        if isKPrime(num, k, &prime) { count += 1 }
+        if isNumStrPrime(num, &prime) { count += 1 }
     }
     
     return count
 }
 
-func isKPrime(
+func isNumStrPrime(
     _ num: String, 
-    _ k: Int, 
     _ prime: inout [Int: Bool]
 ) -> Bool {
     let num = Int(num)!
@@ -44,15 +43,4 @@ func isPrime(_ n: Int) -> Bool {
     }
     
     return true
-}
-
-func trans(_ n: Int, _ k: Int) -> String {
-    var res = ""
-    var n = n
-    while n > 0 {
-        res += String(n % k)
-        n = n / k
-    }
-    
-    return String(res.reversed())
 }

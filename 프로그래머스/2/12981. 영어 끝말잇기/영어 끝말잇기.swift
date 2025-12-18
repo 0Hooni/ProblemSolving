@@ -8,11 +8,7 @@ func solution(_ n:Int, _ words:[String]) -> [Int] {
         let curPerson = idx % n + 1
         print(words[0..<idx], word)
         
-        if Array(words[0..<idx]).contains(word) {
-            return [curPerson, (idx / n) + 1]
-        } else if idx != 0 && !isCorrectWord(words[idx-1], words[idx]) {
-            // 0, 1, 2 -> 1번 턴
-            // 3, 4, 5 -> 2번 턴
+        if idx != 0 && !isPossible(idx, words) {
             return [curPerson, (idx / n) + 1]
         }
     }
@@ -20,7 +16,8 @@ func solution(_ n:Int, _ words:[String]) -> [Int] {
     return result
 }
 
-func isCorrectWord(_ prev: String, _ cur: String) -> Bool { 
-    return Array(prev).map { String($0) }.last 
-    == Array(cur).map { String($0) }.first
+func isPossible(_ idx: Int, _ words: [String]) -> Bool { 
+    return Array(words[idx-1]).map { String($0) }.last 
+    == Array(words[idx]).map { String($0) }.first
+    && !Array(words[0..<idx]).contains(words[idx])
 }

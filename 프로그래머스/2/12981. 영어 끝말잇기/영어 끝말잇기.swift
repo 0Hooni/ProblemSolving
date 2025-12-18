@@ -4,12 +4,11 @@ func solution(_ n:Int, _ words:[String]) -> [Int] {
     var result = [0, 0]
     
     for (idx, word) in words.enumerated() {
-        let curTurn = idx + 1
         let curPerson = idx % n + 1
-        print(words[0..<idx], word)
+        let curTurn = (idx / n) + 1
         
         if idx != 0 && !isPossible(idx, words) {
-            return [curPerson, (idx / n) + 1]
+            return [curPerson, curTurn]
         }
     }
     
